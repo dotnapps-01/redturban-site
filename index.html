@@ -6,7 +6,7 @@
 <title>The Red Turban — Event management for celebrations worth a crown</title>
 <meta name="description" content="The Red Turban plans and stages weddings, traditional entries, corporate events and family celebrations across Tamil Nadu and India. Estimate your budget, build a planning timeline and send your brief in minutes.">
 <meta name="theme-color" content="#E4152C">
-<meta name="color-scheme" content="light dark">
+<meta name="color-scheme" content="light">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Red Turban">
 <meta property="og:title" content="The Red Turban — Celebrations worthy of a crown">
@@ -26,7 +26,7 @@
 (function () {
   try {
     var d = document.documentElement;
-    var t = localStorage.getItem('rt_theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var t = localStorage.getItem('rt_theme') || 'light'; /* light by default; night mode only if the visitor toggles it */
     d.setAttribute('data-theme', t);
     var l = localStorage.getItem('rt_lang'); if (l === 'ta') d.setAttribute('lang', 'ta');
     var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
